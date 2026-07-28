@@ -7,7 +7,7 @@ echo === Java Version ===
 java -version
 
 echo === Building ===
-call C:\Users\Lenovo\.m2\wrapper\dists\apache-maven-3.9.10\a38810a491b03367137adfdfbe7d14c4\bin\mvn.cmd clean package -DskipTests
+call C:\Users\Lenovo\.m2\wrapper\dists\apache-maven-3.9.10\a38810a491b03367137adfdfbe7d14c4\bin\mvn.cmd clean package -s C:\Users\Lenovo\Desktop\admin_platform\admin_backend\settings.xml -DskipTests
 if %ERRORLEVEL% NEQ 0 (echo === BUILD FAILED === & pause & exit /b 1)
 
 echo.
