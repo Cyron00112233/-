@@ -13,7 +13,7 @@ public class JwtInterceptor implements HandlerInterceptor {
 
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) {
-        if (request.getRequestURI().contains("/api/auth/login")) return true;
+        if ("/api/auth/login".equals(request.getRequestURI()) || "/api/auth/init".equals(request.getRequestURI())) return true;
         String authHeader = request.getHeader("Authorization");
         if (authHeader == null || !authHeader.startsWith("Bearer ")) { response.setStatus(401); return false; }
         String token = authHeader.substring(7);

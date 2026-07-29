@@ -1,6 +1,6 @@
 @echo off
 cd /d "C:\Users\Lenovo\Desktop\admin_platform\admin_backend"
-set "JAVA_HOME=C:\Users\Lenovo\Desktop\admin_platform\java21\jdk-21.0.2"
+set "JAVA_HOME=C:\Program Files\Java\jdk-25.0.2"
 set "PATH=%JAVA_HOME%\bin;%PATH%"
 
 echo === Java Version ===

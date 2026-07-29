@@ -20,9 +20,13 @@ import org.apache.ibatis.mapping.BoundSql;
 import org.apache.ibatis.mapping.MappedStatement;
 import org.apache.ibatis.session.ResultHandler;
 import org.apache.ibatis.session.RowBounds;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import java.sql.SQLException;
 
 public class DataPermissionInterceptor implements InnerInterceptor {
+    private static final Logger log = LoggerFactory.getLogger(DataPermissionInterceptor.class);
     private static final String PROJECT_TABLE = "project";
 
     @Override
@@ -40,7 +44,7 @@ public class DataPermissionInterceptor implements InnerInterceptor {
             PluginUtils.MPBoundSql mpBs = PluginUtils.mpBoundSql(boundSql);
             mpBs.sql(modifiedSql);
         } catch (Exception e) {
-            System.err.println("DataPermission error: " + e.getMessage());
+            log.error("DataPermission error: {}", e.getMessage(), e);
         }
     }
 

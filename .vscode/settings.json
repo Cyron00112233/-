@@ -1,4 +1,15 @@
 {
     "java.compile.nullAnalysis.mode": "automatic",
-    "java.configuration.updateBuildConfiguration": "interactive"
+    "java.configuration.updateBuildConfiguration": "automatic",
+    "java.import.maven.enabled": true,
+    "java.project.sourcePaths": [
+        "admin_backend/src/main/java"
+    ],
+    "java.project.referencedLibraries": [
+        "admin_backend/target/**/*.jar",
+        "m2_repo/**/*.jar"
+    ],
+    "java.configuration.maven.userSettings": "admin_backend/settings.xml",
+    "java.configuration.maven.globalSettings": "admin_backend/settings.xml",
+    "java.autobuild.enabled": true
 }

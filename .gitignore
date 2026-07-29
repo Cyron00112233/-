@@ -1,4 +1,15 @@
-﻿# Maven local repo
 m2_repo/
-# JDK
 java21/
+admin_backend/target/
+admin_backend/stderr.log
+admin_backend/stdout.log
+admin_flutter/build/
+admin_flutter/.dart_tool/
+admin_flutter/windows/flutter/ephemeral/
+admin_flutter/windows/flutter/generated_plugin_registrant.cc
+admin_flutter/windows/flutter/generated_plugin_registrant.h
+admin_flutter/windows/flutter/generated_plugins.cmake
+*.log
+.idea/
+.vscode/
+*.iml
